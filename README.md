@@ -1,6 +1,6 @@
 # Spanner - OpenCensus Example
 
-### About Cloud Spanner
+## About Cloud Spanner
 
 [Cloud Spanner](https://cloud.google.com/spanner/) is a fully managed, mission-critical, 
 relational database service that offers transactional consistency at global scale, 
@@ -29,3 +29,27 @@ $ mvn clean package
 ```bash
 $ mvn exec:java -Dexec.mainClass=com.example.spanner.App
 ```
+
+Go to http://localhost:8080/spanner/ and, start sending read request.
+
+## OpenCensus agent
+
+The `ocagent` can be run directly from sources, binary, or a Docker image. Here will try from the sources.
+
+### Cloning source
+Open up a new shell to get the OpenCensus agent
+```bash
+git clone https://github.com/census-instrumentation/opencensus-service.git && cd opencensus-service
+```
+
+### Building it
+```bash
+make agent
+```
+which will place the binary in the bin folder in your current working directory
+
+### Running it
+```bash
+./bin/ocagent_darwin --config=/conf/config.yaml
+```
+
