@@ -21,7 +21,6 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping(path = "/spanner")
 public class PersonController {
-
   private Spanner spanner;
   private DatabaseClient dbClient;
   String instanceId = "demo";
