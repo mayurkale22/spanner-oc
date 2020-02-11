@@ -7,6 +7,7 @@ import com.google.cloud.spanner.Mutation;
 import com.google.cloud.spanner.ResultSet;
 import com.google.cloud.spanner.Spanner;
 import com.google.cloud.spanner.SpannerOptions;
+import io.opencensus.contrib.observability.ready.util.BasicSetup;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
@@ -35,7 +36,7 @@ public class PersonController {
     String projectId = options.getProjectId();
     dbClient = spanner.getDatabaseClient(DatabaseId.of(projectId, instanceId, databaseId));
 
-    // BasicSetup.enableOpenCensus();
+    BasicSetup.enableOpenCensus();
   }
 
   @GetMapping(path = "/", produces = "application/json")
