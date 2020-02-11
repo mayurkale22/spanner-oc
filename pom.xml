@@ -112,7 +112,7 @@
         <artifactId>exec-maven-plugin</artifactId>
         <version>1.4.0</version>
         <configuration>
-          <mainClass>com.example.spanner.SpringBootRestApplication</mainClass>
+          <mainClass>com.example.spanner.App</mainClass>
         </configuration>
       </plugin>
     </plugins>

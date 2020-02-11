@@ -27,5 +27,5 @@ $ mvn clean package
 
 ### To Run the example
 ```bash
-$ mvn exec:java -Dexec.mainClass=com.example.spanner.SpringBootRestApplication
+$ mvn exec:java -Dexec.mainClass=com.example.spanner.App
 ```
